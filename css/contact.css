@@ -1,0 +1,492 @@
+
+/* ――――――――― Header ――――――――― */
+/* Descripción: Estilos para la cabecera de la página */ 
+
+.Header{
+    
+    width: 100%; 
+    padding: 1.25rem 4rem; 
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    position: fixed;
+    
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+
+    animation: slideDown 2s ease 1;
+    z-index: 1;
+    
+    margin: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; 
+    align-items: center;
+    width: 60%;
+
+    gap: 5rem; 
+}
+
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 6.25rem;
+}
+
+.Header-li::after{
+    content: "";
+    height: 2px;
+    display: block;
+
+    background-color: var(--color-secondary);
+    transform-origin: left;
+    transform: scaleX(0);
+
+    transition: all 1s ease;  
+}
+
+.Header-li:hover::after{
+    transform: scaleX(1);
+}
+
+.Header-contact{
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.Header-burguer{
+    display: none;
+}
+
+.Header-svg{
+    width: 2rem;
+    height: 2rem;
+}
+/* ――――――――― Header ――――――――― */
+
+
+
+
+
+
+
+/* ――――――――― Presentación ――――――――― */
+/* Descripción: Estilos para la breve presentación */ 
+
+.Main-presentation{
+    padding-top: 6.25rem;
+}
+
+.Main-img{
+    width: 10vh;
+    margin: 2rem auto 0;
+}
+
+.Main-h4{
+    text-align: center;
+    font-size: var(--h4-size);
+    padding: 2rem;
+    line-height: 1.8rem;
+}
+/* ――――――――― Presentación ――――――――― */
+
+
+
+
+
+
+/* ――――――――― Pop up / Lightbox ――――――――― */
+/* Descripción: Estilos para el pop up que aparece cuando hacemos click al rellenar el formulario */ 
+
+.Lightbox{
+    position: fixed;
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4rem);
+    background-color: rgba(255,255,255,.2);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    gap:2rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.Lightbox.isActive{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.Lightbox-close{
+    width: 4rem;
+    background-color: var(--color-white);
+
+    padding: .4rem; 
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: all .5s ease;
+
+    z-index: 1;
+}
+
+.Lightbox-close:hover{
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 1rem 0 rgba(255, 255, 255, .2);
+}
+
+.Lightbox-close:hover .Lightbox-svg{
+    fill: var(--color-white);
+}
+
+.Lightbox-close:active{
+    transform: scale(5);
+    opacity: 0;
+}
+
+.Lightbox-wrapper{
+    width: 60%;
+    max-width: 75rem;
+    /* height: 80vh; */
+    padding: 3.125rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    border: 1px solid var(--color-white);
+
+    z-index:1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.Lightbox-h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+.Lightbox-p {
+    font-size: var(--p-size);
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+.Lightbox-svg {
+    fill: #84E6BC;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.Lightbox-bg{
+    position: absolute;
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ――――――――― Formulario ――――――――― */
+/* Descripción: Estilos para el formulario */ 
+
+.Main-form{
+    max-width: 500px;
+    margin: auto;
+}
+
+.Form-top{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Form-wrapper{
+    width: 100%;
+    padding: 0 .625rem;
+}
+
+.Form-label{
+    margin: 2.5rem 0rem 0.5rem 0;
+}
+
+.Form-input{
+    height: 5vh;
+    border: 1px solid var(--color-secondary);
+    border-radius: 0.7rem;
+    color: #141c3a;
+    box-shadow: none;
+    padding: .625rem;
+}
+
+.Form-error{
+    border-color: red;
+}
+
+textarea{
+    border-radius: 0.7rem;
+    border: 1px solid var(--color-secondary);
+    padding: .625rem;
+}
+
+.Form-label::after {
+    content: " *";
+    color: #001f3f;
+} 
+    
+.Form-button{
+    white-space: nowrap;
+    background-color: #001f3f ;
+    padding: 1rem 2rem;
+    width: 60%;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 12px lightgrey,
+                -6px -6px 50px white;
+                
+    color: var(--color-white);
+    margin: 6.25rem auto;
+}
+
+.Form-button:hover{
+    background-color: var(--color-secondary);
+    color: #001f3f;
+    transition: all 1s ease;
+    font-weight: 500;
+}
+/* ――――――――― Formulario ――――――――― */
+
+
+
+
+
+
+/* ――――――――― Cursor ――――――――― */
+/* Descripción: Estilos para el cursor */ 
+
+.Main-cursor{ 
+    position: fixed;  
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px; 
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+} 
+
+.cursor-text{
+    cursor: text;
+}
+
+.Main-cursor.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+/* ――――――――― Cursor ――――――――― */
+
+
+
+
+
+
+
+
+
+
+
+/* ――――――――― Pie de página ――――――――― */
+/* Descripción: Estilos para el pie de página */ 
+
+.Footer{
+    background-color: #001f3f;
+    margin: auto;
+    padding: 3.125rem;
+}
+
+.Footer-wrapper{
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+
+   gap: 1.25rem;
+}
+
+.Footer-h5{
+    color: var(--color-white);
+    font-size: var(--h5-size);
+    font-weight: 400;
+}
+
+.Footer-social{
+    padding: 3.125rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+.Footer-li{
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-secondary);
+}
+
+.Footer-rights{
+    color: var(--color-white);
+    font-size: var(--p-size);
+    font-weight: 300;
+}
+
+.Footer-boxes{
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-secondary);
+}
+
+.Footer-svg{
+    fill:var(--color-secondary);
+}
+/* ――――――――― Pie de página ――――――――― */
+
+
+
+
+
+
+
+/* ――――――――― Media Querys - 1200px――――――――― */
+/* Descripción: Estilos para tablet */
+
+@media  (max-width:1200px) {
+
+    .Main-cursor{ 
+        display: none;
+    }
+    
+    .Header-burguer{
+        display: block;
+        cursor: pointer;  
+    }
+
+    .Header-logo{
+        
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .Header-nav{
+        width: 100%;
+        height:0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .5s ease;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .Header-nav.isActive{
+        height: 60vh;
+        pointer-events: auto;
+    }
+
+    .Header-ul{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .Header-a{
+        display: none;
+    }
+
+    .Lightbox-wrapper{
+        width: 80%;
+    }
+}
+/* ――――――――― Media Querys - 1200px――――――――― */
+
+
+
+
+
+/* ――――――――― Media Querys - 600px――――――――― */
+/* Descripción: Estilos para mobile */
+
+@media (max-width:600px){
+
+    .Main-cursor{ 
+        display: none;
+    }
+
+    .Main-form{
+        display: flex;
+        flex-flow:column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Form-wrapper{
+        width: 80%;
+    }
+
+    .Form-top{
+        display: flex;
+        flex-flow:column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Lightbox-wrapper{
+        width: 80%;
+    }
+
+    .Lightbox{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4rem);
+        background-color: white;
+    }
+} 
+/* ――――――――― Media Querys - 600px――――――――― */

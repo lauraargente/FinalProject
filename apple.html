@@ -1,0 +1,568 @@
+<!-- 
+    Descripción: Este archivo HTML contiene la página del proyecto de Apple España, es una replica de la web hecha desde 0. 
+    Estructura general: 
+    -Encabezado
+    -Barra de navegación
+    -Contenido principal (donde encontramos un grid de imagenes y un slider hecho con JS)
+    -Pie de página
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="assests/home/Logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/apple.css">
+    <script src="js/apple.js" defer></script>
+</head>
+<body>
+
+       <!-- 
+        Encabezado.
+        Descripción: En esta bloque encontramos el menu de navegación a las diferentes páginas del sitio web.
+     -->
+    <div class="Header">
+        <div class="Header-nav"> 
+            <h1 class= "Header-h1">
+                    <span class="Header-span">Title</span> 
+                    <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg"  fill="white"  viewBox="0 0 16 16">
+                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                    </svg>
+            </h1>
+
+            <ul class="Header-ul">
+                <li class="Header-li">Tienda</li>
+                <li class="Header-li">Mac</li>
+                <li class="Header-li">iPad</li>
+                <li class="Header-li">iPhone</li>
+                <li class="Header-li">Watch</li>
+                <li class="Header-li">AirPods</li>
+                <li class="Header-li">TV y Casa</li>
+                <li class="Header-li">Entretenimiento</li>
+                <li class="Header-li">Accesorios</li>
+                <li class="Header-li">Soporte</li>
+                <li class="Header-li">
+                    <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </li>
+                <li class="Header-li">
+                    <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    </svg>
+                </li>
+            </ul>
+
+            <div class="Header-hamburguesa">
+                <svg class="Header-burguer" xmlns="http://www.w3.org/2000/svg"  fill="CurrentColor"  viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>  
+        </div>
+
+        <h5 class="Header-h5">Consigue entre 220€ y 735€ para un iPhone 14 o iPhone 14 Pr al entregar un iPhone 11 o posterior. </h5>
+    </div>
+
+
+    <!-- 
+        Contenido principal.
+        Descripción: En este bloque encontramos el contenido principal de la página
+        compuesta de 4 secciones que promocionan los diferentes productos de Apple.
+        Productos:
+        -Hero (contiene el MacBook Air 15)
+        -Iphone
+        -IphonePro
+        -Grid compuesto de: MacStudio, MacPro, TradeIn, Watch, Ipad, Fitness
+     -->
+    <div class="Main">
+        <section class="Main-section Hero">
+            <h2 class="Hero-h2">MacBook Air de 15"</h2>
+            <h3 class="Hero-h3">Grande. Fino. Casi imposible.</h3>
+            <h4 class="Hero-h4">Disponible el 13/6</h4>
+            <div class="Hero-buttons">
+                <div class="Hero-button">
+                    <a href="#" class="Hero-a">Más información ></a>
+                </div>
+                <div class="Hero-button">
+                    <a href="#" class="Hero-a">Reservar > </a>
+                </div>
+            </div>
+
+            <div class="Hero-mac"> 
+                    <img src="assests/apple/heroMacbookAir.jpg" alt="MacBookAir" class="Hero-img" loading="lazy"> 
+            </div> 
+        </section>
+
+        <section class="Main-section IphonePro">
+            <h2 class="IphonePro-h2">iPhone 14 Pro</h2>
+            <h3 class="IphonePro-h3">Pro. Muy Pro.</h3>
+            <div class="IphonePro-buttons">
+                <div class="IphonePro-button">
+                    <a href="#" class="IphonePro-a">Más información ></a>
+                </div>
+                <div class="IphonePro-button">
+                    <a href="#" class="IphonePro-a">Comprar ></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="Main-section Iphone">
+            <h2 class="Iphone-h2">iPhone 14 Pro</h2>
+            <h3 class="Iphone-h3">Pro. Muy Pro.</h3>
+            <div class="Iphone-buttons">
+                <div class="Iphone-button">
+                    <a href="#" class="Iphone-a">Más información ></a>
+                </div>
+                <div class="Iphone-button">
+                    <a href="#" class="Iphone-a">Comprar ></a>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="Main-section Grid">
+            <article class="Grid-MacStudio">
+                <h3 class="Grid-h3 ">Mac Studio</h3>
+                <h4 class="Grid-h4">Superpotenciado con M2 Max y M2 Ultra</h4>
+                <h5 class="Grid-h5">Disponible el 13/6</h5>
+
+                <div class="Grid-buttons">
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Más información ></a>
+                    </div>
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Comprar ></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="Grid-MacPro">
+                <h3 class="Grid-h3 ">Mac Pro</h3>
+                <h4 class="Grid-h4">Transformado por el chip de Apple</h4>
+                <h5 class="Grid-h5">Disponible el 13/6</h5>
+
+                <div class="Grid-buttons">
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Más información ></a>
+                    </div>
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Comprar ></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="Grid-TradeIn">
+                <h3 class="Grid-h3 ">Trade In</h3>
+                <h4 class="Grid-h4">Renueva y ahorra. Así de fácil.</h4>
+
+                <div class="Grid-button">
+                    <a href="#" class="Grid-a">Comprobar el valor del dispositivo ></a>
+                </div>
+            </article>
+
+            <article class="Grid-Watch">
+                <h3 class="Watch-h3 ">Watch</h3>
+                <p class="Watch-p">SERIES 8</p>
+                <h4 class="Watch-h4">Progresa saludablemente.</h4>
+                <div class="Grid-buttons">
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Más información ></a>
+                    </div>
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Comprar ></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="Grid-Ipad">
+                <h3 class="Grid-h3 ">iPad</h3>
+                <h4 class="Grid-h4">Ultramágico. Megaquerible. Superpintón.</h4>
+                <div class="Grid-buttons">
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Más información ></a>
+                    </div>
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Comprar ></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="Grid-Fitness">
+                <h3 class="Grid-h3 ">Fitness +</h3>
+                <h4 class="Grid-h4">Desde HIIT hasta yoga, seguro que encuentras lo que más te gusta.</h4>
+                <div class="Grid-buttons">
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Más información ></a>
+                    </div>
+                    <div class="Grid-button">
+                        <a href="#" class="Grid-a">Comprar ></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- 
+            Bloque Slider
+            Descripción:En este bloque tenemos una galeria de imagenes que van rotando cada 3 segundos, 
+            o que las podemos cambiar pulsando cada uno de los Slider-li.
+         -->
+        <div class="Slider">
+            <div class="Slider-container">
+                <div class="Slider-wrapper">
+                    <div class="Slider-center Slider-static isActive">
+                        <img class="Slider-center-img" src="assests/apple/slider1.jpg" title="1st image" alt="Platonico" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider2.jpg" title="2nd image" alt="Ghosting" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider3.jpg" title="3rd image" alt="Las gotas de Dios" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider4.jpg" title="3rd image" alt="The crowded room" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider5.jpg" title="3rd image" alt="Planeta prehistorico 2" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider6.jpg" title="3rd image" alt="High Desert" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider7.jpg" title="3rd image" alt="Ted Lasso" loading="lazy">
+                    </div>
+
+                    <div class="Slider-center">
+                        <img class="Slider-center-img" src="assests/apple/slider8.jpg" title="3rd image" alt="Silo" loading="lazy">
+                    </div>
+
+                </div>
+
+                <ul class="Slider-sides">
+                    <li class="Slider-prev">
+                        <img src="assests/apple/slider8.jpg" alt="" class="Slider-prev-img" loading="lazy">
+                    </li>
+                    <li class="Slider-next">
+                        <img src="assests/apple/slider2.jpg" alt="" class="Slider-next-img" loading="lazy">
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="Slider-ul">
+                <li class="Slider-li isActive"></li>
+                <li class="Slider-li"></li>
+                <li class="Slider-li"></li>
+                <li class="Slider-li"></li>
+                <li class="Slider-li"></li>
+                <li class="Slider-li"></li>
+                <li class="Slider-li"></li>
+                <li class="Slider-li"></li>  
+            </ul>
+        </div>
+    </div>
+
+
+     <!-- 
+        Sección pie de página. 
+        Descripción: En este bloque encontramos el pie de página con la información de las diferentes secciones de la tienda Apple.
+        Importante saber que estas no están vinculadas a ninguna otra web.
+     -->
+    <footer class="Footer">
+
+        <div class="Footer-wrapper">
+            <p class="Footer-p">
+                1. Los descuentos dependen del estado, año y configuración del dispositivo que entregues. Para poder cambiar tu dispositivo por un descuento o una Apple Gift Card, tienes que ser mayor de edad. No todos los dispositivos pueden acogerse a esta oferta. La entrega de ordenadores de mesa solo puede tramitarse por internet en estos momentos. Para obtener más información sobre los dispositivos válidos y su reciclaje, consulta a nuestro socio. Puede haber restricciones y limitaciones. El pago dependerá de que el estado del dispositivo coincida con el indicado durante la tasación. Apple se reserva el derecho a rechazar o limitar la cantidad de dispositivos según su criterio. El valor de tu dispositivo se descontará del precio del producto Apple nuevo. Esta oferta puede no estar disponible en todas las tiendas. Algunas tiendas pueden exigir más requisitos.
+                Apple TV+ requiere suscripción.
+                Para acceder a las prestaciones más recientes, asegúrate de que tus dispositivos tienen instalada la última versión del software.
+            </p>
+
+            <div class="Footer-articles">
+
+                <div class="Footer-column">
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Ver y Comprar</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Tienda</li>
+                            <li class="Footer-li">Mac</li>
+                            <li class="Footer-li">iPad</li>
+                            <li class="Footer-li">iPhone</li>
+                            <li class="Footer-li">Watch</li>
+                            <li class="Footer-li">AirPods</li>
+                            <li class="Footer-li">TV y Casa</li>
+                            <li class="Footer-li">AirTag</li>
+                            <li class="Footer-li">Accesorios</li>
+                            <li class="Footer-li">Tarjetas regalo</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Cartera de Apple</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple Pay</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <div class="Footer-column">
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Cuentas</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Gestionar ID de Apple</li>
+                            <li class="Footer-li">Cuenta del Apple Store</li>
+                            <li class="Footer-li">iCloud.com</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Entretenimiento</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple One</li>
+                            <li class="Footer-li">Apple TV+</li>
+                            <li class="Footer-li">Apple Music</li>
+                            <li class="Footer-li">Apple Arcade</li>
+                            <li class="Footer-li">Apple Fitness+</li>
+                            <li class="Footer-li">Apple Podcasts</li>
+                            <li class="Footer-li">Apple Books</li>
+                            <li class="Footer-li">App Store</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="Footer-column">
+
+                    <article class="Footer-article">
+                    <h5 class="Footer-h5">Apple Store</h5>
+                    <ul class="Footer-ul">
+                        <li class="Footer-li">Encontrar una tienda</li>
+                        <li class="Footer-li">Genius Bar</li>
+                        <li class="Footer-li">Today at Apple</li>
+                        <li class="Footer-li">Campamento de Apple</li>
+                        <li class="Footer-li">App Apple Store</li>
+                        <li class="Footer-li">Reacondicionados certificados</li>
+                        <li class="Footer-li">Apple Trade In</li>
+                        <li class="Footer-li">Financiación</li>
+                        <li class="Footer-li">Estado del pedido</li>
+                        <li class="Footer-li">Ayuda para comprar</li>
+                    </ul>
+                    </article>
+
+                </div>
+
+                <div class="Footer-column">
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Empresas</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple y las empresas</li>
+                            <li class="Footer-li">Compras de empresa</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Educación</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple en educación</li>
+                            <li class="Footer-li">Compras para la universidad</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Salud</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple en el sector sanitario</li>
+                            <li class="Footer-li">Salud en el Apple Watch</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <div class="Footer-column">
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Valores de Apple</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Accesibilidad</li>
+                            <li class="Footer-li">Medio ambiente</li>
+                            <li class="Footer-li">Privacidad</li>
+                            <li class="Footer-li">Responsabilidad de proveedores</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Acerca de Apple</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Newsroom</li>
+                            <li class="Footer-li">Directivos de Apple</li>
+                            <li class="Footer-li">Oportunidades laborales</li>
+                            <li class="Footer-li">Garantía</li>
+                            <li class="Footer-li">Inversores</li>
+                            <li class="Footer-li">Ética y conducta</li>
+                            <li class="Footer-li">Eventos</li>
+                            <li class="Footer-li">Creación de empleo en Europa</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="Footer-wrapper Responsive">
+            <p class="Responsive-p">
+                1. Los descuentos dependen del estado, año y configuración del dispositivo que entregues. Para poder cambiar tu dispositivo por un descuento o una Apple Gift Card, tienes que ser mayor de edad. No todos los dispositivos pueden acogerse a esta oferta. La entrega de ordenadores de mesa solo puede tramitarse por internet en estos momentos. Para obtener más información sobre los dispositivos válidos y su reciclaje, consulta a nuestro socio. Puede haber restricciones y limitaciones. El pago dependerá de que el estado del dispositivo coincida con el indicado durante la tasación. Apple se reserva el derecho a rechazar o limitar la cantidad de dispositivos según su criterio. El valor de tu dispositivo se descontará del precio del producto Apple nuevo. Esta oferta puede no estar disponible en todas las tiendas. Algunas tiendas pueden exigir más requisitos.
+                Apple TV+ requiere suscripción.
+                Para acceder a las prestaciones más recientes, asegúrate de que tus dispositivos tienen instalada la última versión del software.
+            </p>
+
+            <div class="Responsive-articles">
+
+            
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Ver y Comprar</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Tienda</li>
+                            <li class="Footer-li">Mac</li>
+                            <li class="Footer-li">iPad</li>
+                            <li class="Footer-li">iPhone</li>
+                            <li class="Footer-li">Watch</li>
+                            <li class="Footer-li">AirPods</li>
+                            <li class="Footer-li">TV y Casa</li>
+                            <li class="Footer-li">AirTag</li>
+                            <li class="Footer-li">Accesorios</li>
+                            <li class="Footer-li">Tarjetas regalo</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Cartera de Apple</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple Pay</li>
+                        </ul>
+                    </article>
+
+                
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Cuentas</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Gestionar ID de Apple</li>
+                            <li class="Footer-li">Cuenta del Apple Store</li>
+                            <li class="Footer-li">iCloud.com</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Entretenimiento</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple One</li>
+                            <li class="Footer-li">Apple TV+</li>
+                            <li class="Footer-li">Apple Music</li>
+                            <li class="Footer-li">Apple Arcade</li>
+                            <li class="Footer-li">Apple Fitness+</li>
+                            <li class="Footer-li">Apple Podcasts</li>
+                            <li class="Footer-li">Apple Books</li>
+                            <li class="Footer-li">App Store</li>
+                        </ul>
+                    </article>
+            
+
+                    <article class="Footer-article">
+                    <h5 class="Footer-h5">Apple Store</h5>
+                    <ul class="Footer-ul">
+                        <li class="Footer-li">Encontrar una tienda</li>
+                        <li class="Footer-li">Genius Bar</li>
+                        <li class="Footer-li">Today at Apple</li>
+                        <li class="Footer-li">Campamento de Apple</li>
+                        <li class="Footer-li">App Apple Store</li>
+                        <li class="Footer-li">Reacondicionados certificados</li>
+                        <li class="Footer-li">Apple Trade In</li>
+                        <li class="Footer-li">Financiación</li>
+                        <li class="Footer-li">Estado del pedido</li>
+                        <li class="Footer-li">Ayuda para comprar</li>
+                    </ul>
+                    </article>
+
+                
+
+                
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Empresas</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple y las empresas</li>
+                            <li class="Footer-li">Compras de empresa</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Educación</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple en educación</li>
+                            <li class="Footer-li">Compras para la universidad</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Salud</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Apple en el sector sanitario</li>
+                            <li class="Footer-li">Salud en el Apple Watch</li>
+                        </ul>
+                    </article>
+
+               
+                
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Valores de Apple</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Accesibilidad</li>
+                            <li class="Footer-li">Medio ambiente</li>
+                            <li class="Footer-li">Privacidad</li>
+                            <li class="Footer-li">Responsabilidad de proveedores</li>
+                        </ul>
+                    </article>
+
+                    <article class="Footer-article">
+                        <h5 class="Footer-h5">Acerca de Apple</h5>
+                        <ul class="Footer-ul">
+                            <li class="Footer-li">Newsroom</li>
+                            <li class="Footer-li">Directivos de Apple</li>
+                            <li class="Footer-li">Oportunidades laborales</li>
+                            <li class="Footer-li">Garantía</li>
+                            <li class="Footer-li">Inversores</li>
+                            <li class="Footer-li">Ética y conducta</li>
+                            <li class="Footer-li">Eventos</li>
+                            <li class="Footer-li">Creación de empleo en Europa</li>
+                        </ul>
+                    </article>
+
+                
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+    
+</body>
+</html>

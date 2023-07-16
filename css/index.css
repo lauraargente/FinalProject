@@ -1,0 +1,709 @@
+
+/* ――――――――― Header ――――――――― */
+/* Descripción: Estilos para la cabecera de la página */ 
+
+.Header{
+    
+    width: 100%; 
+    padding: 1.25rem 4rem; 
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    position: fixed;
+    
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+
+    animation: slideDown 2s ease 1;
+    z-index: 1;
+    
+    margin: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; 
+    align-items: center;
+    width: 60%;
+
+    gap: 5rem; 
+}
+
+.Header-ul{
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 6.25rem;
+}
+
+.Header-li::after{
+    content: "";
+    height: 2px;
+    display: block;
+
+    background-color: var(--color-secondary);
+    transform-origin: left;
+    transform: scaleX(0);
+
+    transition: all 1s ease;  
+}
+
+.Header-li:not(:last-child):hover::after{
+    transform: scaleX(1);
+}
+
+.Header-button{
+
+    white-space: nowrap;
+    background-color: #001f3f ;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 12px lightgrey,
+                -6px -6px 50px white;
+                
+    color: var(--color-white); 
+}
+
+.Header-button:hover{
+    background-color: var(--color-secondary);
+    color: #001f3f;
+    transition: all 1s ease;
+    font-weight: 500;
+}
+
+.Header-button:active{
+    white-space: nowrap;
+    background-color: aqua ;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 12px lightgrey,
+                -6px -6px 50px white;
+                
+    color: var(--color-white);
+}
+
+.Header-burguer{
+    display: none;
+}
+
+.Header-svg{
+    width: 2rem;
+    height: 2rem;
+}
+/* ――――――――― Header ――――――――― */
+
+
+
+
+
+
+
+
+
+
+
+/* ――――――――― Contenido principal ――――――――― */
+/* Descripción: Estilos para el contenido principal de la página */ 
+
+.Main{
+    width: 100%; 
+}
+
+.Main-cursor{ 
+    position: fixed;  
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px; 
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+} 
+
+.cursor-text{
+    cursor: text;
+}
+
+.Main-cursor.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+/* ――――――――― Header ――――――――― */
+
+
+
+
+
+
+/* ――――――――― Bloque Presentation ――――――――― */
+/* Descripción: Estilos para el bloque presentación */ 
+
+.Presentation{
+    width: 90%;
+    
+    margin: auto;
+    padding-top: 6.25rem;
+}
+
+.Presentation-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+.Presentation-content{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3.125rem;
+    padding-left: 0.5rem;  
+}
+
+.Presentation-h2{
+    font-size: var(--h2-size);
+    overflow: hidden;   
+}
+
+.Presentation-text{
+    animation: slideUp 2s ease 1;
+    display: block;
+    overflow: hidden;
+}
+
+.Presentation-h4{
+    font-size: var(--h4-size);
+    display: block;
+    overflow: hidden;
+}
+
+.Presentation-svg{
+    width: 10rem;
+    height: 10rem;
+}
+
+.Presentation-img{
+    width: 100%; 
+}
+/* ――――――――― Bloque Presentation ――――――――― */
+
+
+
+
+
+
+
+
+
+
+
+/* ――――――――― Bloque Meet ――――――――― */
+/* Descripción: Estilos para el bloque Meet */ 
+
+.Meet{
+    background-color: #708090;
+    padding: 6.25rem;  
+}
+
+.Meet-article{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.875rem;
+    
+    color: var(--color-white);
+}
+
+.Meet-h3{
+    font-size: var(--h3-size);
+}
+
+.Meet-p{
+    line-height: 1.875rem;
+    font-size: var(--p-size); 
+    width: 80%; 
+    text-size-adjust: auto ;
+}
+/* ――――――――― Bloque Meet ――――――――― */
+
+
+
+
+
+
+
+
+
+
+/* ――――――――― Bloque Skills ――――――――― */
+/* Descripción: Estilos para el bloque Skills */ 
+
+.Skills{
+    background-color: var(--color-white); 
+    margin: -4rem auto 1rem;
+   
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; 
+    width: 90%;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+            
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Skills-article{
+    padding: 3.125rem;
+    
+    width: 33%; 
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    position: relative; 
+}
+
+.Skills-article::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 1px;
+    height: 60%;
+    background-color: lightgray;
+}
+
+.Skills-article:last-child::after{
+    background-color: transparent;
+}
+
+.Skills-logo{
+    background-color: var(--color-secondary);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2rem 0;
+}
+
+.Skills-svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+.Skills-h3{
+    font-size: var(--h3-size);
+    text-align: center;
+}
+
+.Skills-p{
+    text-align: center;  
+}
+
+.Skills-h4{
+    font-size: var(--h4-size);
+    color: var(--color-pink);
+    white-space: nowrap;
+}
+
+.Skills-h5{
+    font-size: var(--h5-size);
+    text-align: center;
+}
+
+/* ――――――――― Bloque Skills ――――――――― */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ――――――――― Bloque Rcent Work ――――――――― */
+/* Descripción: Estilos para el bloque Work */ 
+
+.Work{
+    margin: auto;
+}
+
+.Work-text{
+    margin-top: 5rem;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.Work-h2{
+    font-size: var(--h2-size);
+    margin: auto;
+    text-align: center;
+}
+
+.Work-h4{
+    font-size: var(--h4-size);
+    margin: auto;
+    text-align: center;
+}
+
+.Work-ul{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+    gap: 3.125rem;
+    width: 90%;
+
+    padding: 5rem 0 5rem 0;   
+}
+
+.Work-a{
+    position: relative;
+
+    border-radius: 1rem;
+    box-shadow: 20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+
+    transition: all 1s ease;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.Work-a:hover{
+    transform: scale(1.1);
+    border-color: white;
+}
+
+.Work-video{
+    opacity: 0%;
+    transition: all 1s ease;   
+}
+
+.Work-a:hover .Work-video {
+  opacity: 100%;
+}
+
+.Work-img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.Work-img:hover{
+    opacity: 0;
+} 
+
+.Work-grid{
+    display: none;
+}
+
+.Work-responsive{
+    display: none;  
+}
+/* ――――――――― Bloque Rcent Work ――――――――― */
+
+
+
+
+
+
+
+
+
+/* ――――――――― Pie de página ――――――――― */
+/* Descripción: Estilos para el pie de página */ 
+
+.Footer{
+    background-color: #001f3f;
+    margin: auto;
+    padding: 3.125rem;
+}
+
+.Footer-wrapper{
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+
+   gap: 1.25rem;
+}
+
+.Footer-h5{
+    color: var(--color-white);
+    font-size: var(--h5-size);
+    font-weight: 400;
+    text-align: center;
+}
+
+.Footer-social{
+    padding: 3.125rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+.Footer-li{
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-secondary);
+}
+
+.Footer-rights{
+    color: var(--color-white);
+    font-size: var(--p-size);
+    font-weight: 300;
+}
+
+.Footer-boxes{
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-secondary);
+}
+
+.Footer-svg{
+    fill:var(--color-secondary);
+}
+/* ――――――――― Pie de página ――――――――― */
+
+
+
+
+
+
+
+
+/* ――――――――― Media Querys - 1200px――――――――― */
+/* Descripción: Estilos para tablet */
+
+@media  (max-width:1200px) {
+
+    .Main-cursor{ 
+        display: none;
+    }
+
+    .Header-burguer{
+        display: block;
+        cursor: pointer;
+    }
+
+    .Header-logo{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .Header-nav{
+        width: 100%;
+        height:0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .5s ease;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Header-nav.isActive{
+        height: 60vh;
+        pointer-events: auto;
+    }
+
+    .Header-ul{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .Header-a{
+        display: none;
+    }
+
+    .Main-section.Skills{
+        display: flex; 
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .Main-cursor{
+        display: none;
+    }
+
+    .Skills-article{
+        display: flex; 
+        flex-flow: column nowrap;
+        width: 100%;
+        position: relative;
+    }
+    
+    .Skills-article::after{
+        display: none; 
+    }
+
+    .Skills-article:last-child::before{
+        display: none; 
+    }
+    
+    .Skills-article::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+        width: 60%;
+        height: 1px;
+        background-color: lightgray; 
+    }
+
+    .Work-img{
+        display: none;
+    }
+
+    .Work-responsive{
+        display: block;
+    }
+
+    .Work-video{
+        display: none;  
+    }
+}
+
+/* ――――――――― Media Querys - 1200px――――――――― */
+
+
+
+
+
+/* ――――――――― Media Querys - 600px――――――――― */
+/* Descripción: Estilos para mobile */
+
+@media  (max-width:600px) {
+
+    .Main-cursor{ 
+        display: none;
+    }
+
+    .Header-burguer{
+        display: block; 
+    }
+
+    .Header-a{
+        display: none;
+    }
+
+    .Meet-p{
+        width: 100%; 
+    }
+
+    .Main-cursor{
+        display: none;
+    }
+
+    .Main-section.Skills{
+        display: flex; 
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .Skills-article{
+        display: flex; 
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    .Meet{
+        padding: 6.25rem 2rem 6.25rem 2rem;
+    }
+
+    .Work-h4{ 
+        width: 80%;
+    }
+
+    .Work-video{
+        display: none;  
+    }
+
+    .Work-responsive{
+        display: block;
+    }
+
+    .Work-img:hover{
+        display: none;
+    } 
+
+    .Work-a:hover .Work-video {
+        display: none;
+      }
+}
+/* ――――――――― Media Querys - 600px――――――――― */
+
+
+
+
+
+
+/* ――――――――― Key frames Animaciones――――――――― */
+/* Descripción: Estilos para las animaciones */
+
+
+@keyframes slideDown{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUp{
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+
