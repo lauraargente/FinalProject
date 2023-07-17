@@ -2,7 +2,7 @@
 ![Imagen del proyecto](https://raw.githubusercontent.com/lauraargente/FinalProject/f8d9f3d2109dc01d4f4ecdc15b67e0cc6cfab06c/assests/home/lauraAvatar.svg)
 
 ## Ejemplo en vivo
-- [URL-de-github-pages-de-este-proyecto](https://lauraargente.github.io/porfolio/)
+- [URL-de-github-pages-de-este-proyecto](https://lauraargente.github.io/Porfolio/)
 - [URL-dominio-personal](https://lauraargente.com/)
 
 ## Descripción 📑
