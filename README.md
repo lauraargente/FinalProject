@@ -14,6 +14,7 @@ Este es el proyecto final de la asignatura Diseño de Sitios Web del CEI.
 - Trabajo reciente (encontraremos una galería con los proyectos personales en los que he estado trabajando más recientemente)
 - Contacto
 - Sección de trabajos recientes
+
 Durante la parte creativa me inspiré en diseños de landingfolio.com y awards.com. Luego, usando el programa de diseño Figma, desarrollé los wireframes y diseñé el portafolio y sus diferentes secciones desde cero. También se ha diseñado y personalizado el logotipo de la web.
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻 
