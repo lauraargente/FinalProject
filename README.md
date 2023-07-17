@@ -1,5 +1,5 @@
  # Porfolio Personal 
-![Imagen del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/IMAGEN-DEL-PROYECTO.jpg?raw=true)
+![Imagen del proyecto](https://raw.githubusercontent.com/lauraargente/FinalProject/f8d9f3d2109dc01d4f4ecdc15b67e0cc6cfab06c/assests/home/lauraAvatar.svg)
 
 ## Ejemplo en vivo
 - [URL-de-github-pages-de-este-proyecto](https://lauraargente.github.io/FinalProject/)
@@ -37,7 +37,7 @@ Si quieres hechas un vistazo al proyecto, te recomiendo:
 ## Autor ✒️
 **Laura Argente Escamilla**
 
-* [micorreo@midominio.com](micorreo@midominio.com)
+* [micorreo@midominio.com](argente_2@alumnos.cei.es)
 * [LinkedIn](https://www.linkedin.com/in/laura-argente-escamilla-16a18b14b/)
 * [Porfolio web](https://lauraargente.com/)
 
