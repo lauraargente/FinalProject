@@ -206,13 +206,13 @@ textarea{
 
     gap:2rem;
 
-    opacity: 0;
+    display: none;
     pointer-events: none;
     transition: all .5s ease;
 }
 
 .Lightbox.isActive{
-    opacity: 1;
+    display: block;
     pointer-events: auto;
 }
 
